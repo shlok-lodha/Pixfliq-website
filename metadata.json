@@ -1,0 +1,6 @@
+{
+  "name": "Pixfliq & Aura Studio",
+  "description": "Pixfliq premium creative studio based in Jharsuguda, Odisha alongside Aura — a cinematic AI-native email client showcase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

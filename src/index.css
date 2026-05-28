@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-coral: #FF5C3A;
+  --color-violet: #7B5CF0;
+  --color-lime: #C8F04B;
+  --color-ink: #FAF8F4;
+  --color-muted: #A39E93;
+  --color-base: #111110;
+  --color-dark: #090909;
+  --color-border: #282725;
+  
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+/* Base custom resets */
+html, body {
+  background: #111110;
+  font-family: 'DM Sans', sans-serif;
+  color: #FAF8F4;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: rgba(255, 92, 58, 0.2); /* coral/20 */
+}
