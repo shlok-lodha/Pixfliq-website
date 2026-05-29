@@ -28,7 +28,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
       title: "WanderNest",
       subTitle: "WanderNest Tour & Travels",
       tag: "Travel · Web App",
-      tagBg: "bg-lime text-[#111110]",
+      tagBg: "bg-lime text-slate-900",
       description: "A luxury travel platform with custom tour discovery, booking flows, INR/USD dual-currency support, and clean editorial structure.",
       tech: ["React", "Supabase", "Framer Motion"],
       stats: { "Conversion Boost": "+40%", "Load Time": "0.6s", "Mobile Score": "99%" }
@@ -44,14 +44,14 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
       stats: { "Luxury Leads": "+62%", "Asset Size": "Opt-2.1MB", "Retention": "+25%" }
     },
     {
-      id: "dhara",
-      title: "Dharā",
-      subTitle: "Dharā - Indian Luxury Fashion",
-      tag: "Fashion · E-commerce",
-      tagBg: "bg-[#FF5C3A] text-white",
-      description: "A heritage Indian luxury fashion brand storefront with limited-edition drop mechanics, booking register, and dual-language curation.",
-      tech: ["React", "Supabase", "TailwindCSS"],
-      stats: { "Drop Sellout": "12 Mins", "Page Speed": "98/100", "Bounce Rate": "14%" }
+      id: "sovereign",
+      title: "Sovereign Gym",
+      subTitle: "Sovereign Performance Club",
+      tag: "Fitness · Brand Experience",
+      tagBg: "bg-[#0f172a] text-white",
+      description: "A premium fitness and wellness website built for performance-driven boxing, strength training, and elite member engagement.",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
+      stats: { "Membership Growth": "+38%", "Class Attendance": "96%", "Lead Rate": "+42%" }
     }
   ].map(project => ({
     ...project,
@@ -69,7 +69,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
   };
 
   return (
-    <section id="portfolio" className="bg-[#111110] pt-24 pb-32 text-white relative z-20">
+    <section id="portfolio" className="bg-base pt-24 pb-32 text-white relative z-20">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -91,7 +91,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
           <motion.p
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-muted font-body text-base md:text-lg mt-6 text-gray-400"
+            className="font-body text-sm md:text-lg mt-6 text-gray-400"
           >
             Every pixel is intentional. Every load time is optimized. We design and deliver bespoke high-contrast platforms that make your business impossible to ignore.
           </motion.p>
@@ -110,7 +110,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
                 transition={{ duration: 0.7, delay: idx * 0.15 }}
                 onClick={() => openProject(proj.id)}
                 className={`relative rounded-3xl overflow-hidden cursor-pointer group border border-white/5 shadow-2xl flex flex-col justify-end ${
-                  isFullWidth ? 'md:col-span-2 h-[500px]' : 'col-span-1 h-[440px] md:h-[460px]'
+                  isFullWidth ? 'md:col-span-2 h-125' : 'col-span-1 h-110 md:h-115'
                 }`}
               >
                 {/* BG image + fallback */}
@@ -132,7 +132,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
                 </div>
 
                 {/* Overlay */}
-                <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 z-10 bg-linear-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
 
                 {/* Top bar */}
                 <div className="p-6 md:p-8 absolute top-0 left-0 right-0 z-20 flex justify-between items-center pointer-events-none">
@@ -211,7 +211,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
                 </div>
 
                 {/* Page nav */}
-                <div className="shrink-0 bg-[#111110] border-t border-white/5 px-4 py-3 flex items-center justify-between gap-3">
+                <div className="shrink-0 bg-base border-t border-white/5 px-4 py-3 flex items-center justify-between gap-3">
                   <button
                     onClick={() => setCurrentPage(p => Math.max(0, p - 1))}
                     disabled={currentPage === 0}
@@ -225,7 +225,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
                         key={i}
                         onClick={() => setCurrentPage(i)}
                         className={`rounded-full transition-all duration-300 ${
-                          i === currentPage ? 'w-5 h-2 bg-[#FF5C3A]' : 'w-2 h-2 bg-white/20 hover:bg-white/40'
+                          i === currentPage ? 'w-5 h-2 bg-coral' : 'w-2 h-2 bg-white/20 hover:bg-white/40'
                         }`}
                       />
                     ))}
@@ -244,14 +244,14 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
               <div className="w-full md:w-2/5 p-6 md:p-8 flex flex-col justify-between overflow-y-auto max-h-[45vh] md:max-h-[90vh]">
                 <div>
                   <div className="flex justify-between items-center mb-6">
-                    <span className="text-[10px] font-mono tracking-widest text-[#FF5C3A] uppercase font-bold">// Studio Case File</span>
+                    <span className="text-[10px] font-mono tracking-widest text-coral uppercase font-bold">// Studio Case File</span>
                     <button onClick={() => setSelectedProject(null)} className="p-1.5 text-gray-400 hover:text-white bg-white/5 rounded-full transition-colors cursor-pointer">
                       <X className="w-5 h-5" />
                     </button>
                   </div>
 
                   <h3 className="text-3xl font-display font-black text-white mb-2">{currentProjData.title}</h3>
-                  <p className="text-sm font-semibold text-[#FF5C3A] mb-4">{currentProjData.subTitle}</p>
+                  <p className="text-sm font-semibold text-coral mb-4">{currentProjData.subTitle}</p>
                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-6">
                     This project highlights a high-fidelity digital presence customized from the ground up for elite client engagement. Focused entirely on clean typography grids, precise visual alignment, responsive breakpoints, and cinematic layouts that elevate the brand value instantly.
                   </p>
@@ -265,7 +265,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
                           key={i}
                           onClick={() => setCurrentPage(i)}
                           className={`relative w-14 h-10 rounded-lg overflow-hidden border-2 transition-all duration-200 bg-[#1A1917] ${
-                            i === currentPage ? 'border-[#FF5C3A] shadow-lg shadow-[#FF5C3A]/30' : 'border-white/10 hover:border-white/30'
+                            i === currentPage ? 'border-coral shadow-lg shadow-coral/30' : 'border-white/10 hover:border-white/30'
                           }`}
                         >
                           <img
@@ -285,7 +285,7 @@ export default function Portfolio({ onStartProject }: PortfolioProps) {
                 <div className="border-t border-white/5 pt-6 flex flex-col gap-3 mt-6">
                   <button
                     onClick={() => { setSelectedProject(null); onStartProject(); }}
-                    className="w-full bg-[#FF5C3A] hover:bg-[#FF5C3A]/90 text-white font-bold text-xs py-3 rounded-full shadow-lg transition-all"
+                    className="w-full bg-coral hover:bg-coral/90 text-white font-bold text-xs py-3 rounded-full shadow-lg transition-all"
                   >
                     Build Something Similar
                   </button>

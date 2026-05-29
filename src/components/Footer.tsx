@@ -15,7 +15,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#111110] text-stone-200 pt-20 pb-12 border-t border-white/5 relative z-20">
+    <footer className="bg-base text-stone-200 pt-20 pb-12 border-t border-white/5 relative z-20">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* 4-Column Layout */}
@@ -114,10 +114,7 @@ export default function Footer() {
                   pixfliqconnect@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-2.5 pt-1 border-t border-white/5">
-                <FileCheck className="w-4 h-4 text-stone-500 shrink-0" />
-                <span className="text-xs text-stone-500 font-mono">GSTIN: 21AABCP1834F1ZX</span>
-              </li>
+
             </ul>
           </div>
 

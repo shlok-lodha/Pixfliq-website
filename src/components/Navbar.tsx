@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PixLogo from '../../assets/portfolio/pixfliq icon real-2.png';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 
@@ -62,10 +63,12 @@ export default function Navbar({ onStartProject }: NavbarProps) {
 
             <div className="max-w-7xl mx-auto px-5 md:px-6 py-3.5 flex items-center justify-between relative z-10">
               {/* Logo */}
-              <div onClick={() => scrollToSection('home')} className="cursor-pointer select-none">
-                <span className="font-display text-xl md:text-2xl font-black tracking-tight text-white drop-shadow-sm">
-                  Pixfliq<span className="text-[#FF5C3A]">.</span>
-                </span>
+              <div onClick={() => scrollToSection('home')} className="cursor-pointer select-none flex items-center gap-3">
+                <img src={PixLogo} alt="Pixfliq" className="w-9 h-9 object-contain" style={{imageRendering: 'auto'}} />
+                <div className="leading-tight">
+                  <div className="font-display text-xl md:text-2xl font-black tracking-tight text-white drop-shadow-sm">Pixfliq<span className="text-coral">.</span></div>
+                  <div className="text-xs text-white/70 -mt-0.5">Digital Design Atelier</div>
+                </div>
               </div>
 
               {/* Desktop nav */}
@@ -138,7 +141,7 @@ export default function Navbar({ onStartProject }: NavbarProps) {
                   <button
                     key={id}
                     onClick={() => scrollToSection(id)}
-                    className="text-left text-base font-bold text-white/80 hover:text-white py-2.5 px-3 rounded-xl hover:bg-white/10 transition-all capitalize"
+                    className="text-left text-sm font-bold text-slate-200/80 hover:text-white py-2.5 px-3 rounded-xl hover:bg-white/10 transition-all capitalize"
                   >
                     {id.charAt(0).toUpperCase() + id.slice(1)}
                   </button>

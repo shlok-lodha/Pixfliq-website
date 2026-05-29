@@ -20,11 +20,11 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover pointer-events-none opacity-40"
+          className="w-full h-full object-cover pointer-events-none opacity-80"
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4"
         />
         {/* Sophisticated dark semi-transparent overlay */}
-        <div className="absolute inset-0 bg-[#111110]/55 mix-blend-normal" />
+        <div className="absolute inset-0 bg-base/55 mix-blend-normal" />
       </div>
 
       {/* Hero Content (z-10) */}
@@ -42,9 +42,9 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
         </motion.div>
 
         {/* H1 Title with Staggered Words */}
-        <h1 className="text-6xl md:text-8xl font-display font-black tracking-tight leading-[0.9] flex flex-col items-center select-none">
+        <h1 className="text-4xl sm:text-5xl md:text-8xl font-display font-black tracking-tight leading-[0.95] flex flex-col items-center select-none px-2">
           {/* Line 1: We Build */}
-          <div className="overflow-hidden flex gap-4 mb-2">
+          <div className="overflow-hidden flex flex-wrap gap-4 mb-2 justify-center">
             {titleWordsLine1.map((word, i) => (
               <motion.span
                 key={i}
@@ -63,7 +63,7 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
           </div>
 
           {/* Line 2: Websites (with SVG Underline Squiggle) */}
-          <div className="overflow-hidden py-1.5 mb-2 relative px-4">
+          <div className="overflow-hidden py-1.5 mb-2 relative px-2 sm:px-4">
             <motion.span
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -96,7 +96,7 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
           </div>
 
           {/* Line 3: That Win. */}
-          <div className="overflow-hidden flex gap-4">
+          <div className="overflow-hidden flex flex-wrap gap-4 justify-center">
             {titleWordsLine3.map((word, i) => (
               <motion.span
                 key={i}
@@ -120,7 +120,7 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-lg md:text-xl text-muted font-body max-w-2xl mx-auto mt-8 leading-relaxed font-normal"
+          className="text-lg md:text-xl text-gray-400 font-body max-w-2xl mx-auto mt-8 leading-relaxed font-normal"
         >
           From Odisha to the world — Pixfliq crafts high-performance websites, brand identities, and digital experiences for founders, startups, and businesses ready to grow.
         </motion.p>
@@ -134,14 +134,14 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
         >
           <button
             onClick={onViewWork}
-            className="group cursor-pointer bg-coral hover:bg-coral/95 text-white font-semibold text-base rounded-full px-8 py-4 transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2"
+            className="group cursor-pointer bg-coral hover:bg-coral/95 text-slate-50 font-semibold rounded-full px-8 py-4 transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2"
           >
             View Our Work
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
           <button
             onClick={onTalkShlok}
-            className="group cursor-pointer border border-ink text-ink font-semibold text-base rounded-full px-8 py-4 hover:bg-ink hover:text-base transition-all duration-300 flex items-center justify-center gap-2"
+            className="group cursor-pointer border border-ink text-slate-900 font-semibold rounded-full px-8 py-4 hover:bg-ink hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
           >
             Talk to Shlok
             <span className="text-coral">→</span>
@@ -161,7 +161,7 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
             </div>
             <div className="text-left">
               <div className="font-display font-extrabold text-ink text-lg leading-none">50+ Projects</div>
-              <div className="text-xs text-muted font-body mt-0.5">Delivered Worldwide</div>
+              <div className="text-xs text-gray-400 font-body mt-0.5">Delivered Worldwide</div>
             </div>
           </div>
           
@@ -172,8 +172,8 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
               <Star className="w-5 h-5 fill-lime stroke-ink" />
             </div>
             <div className="text-left">
-              <div className="font-display font-extrabold text-ink text-lg leading-none">4.9★ Rating</div>
-              <div className="text-xs text-muted font-body mt-0.5">Client Satisfaction</div>
+              <div className="font-display font-extrabold text-ink text-lg leading-none">4.5★ Rating</div>
+              <div className="text-xs text-gray-400 font-body mt-0.5">Client Satisfaction</div>
             </div>
           </div>
 
@@ -185,7 +185,7 @@ export default function Hero({ onViewWork, onTalkShlok }: HeroProps) {
             </div>
             <div className="text-left">
               <div className="font-display font-extrabold text-ink text-lg leading-none">3 Countries</div>
-              <div className="text-xs text-muted font-body mt-0.5">Reached Globally</div>
+              <div className="text-xs text-gray-400 font-body mt-0.5">Reached Globally</div>
             </div>
           </div>
         </motion.div>

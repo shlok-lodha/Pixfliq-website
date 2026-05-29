@@ -54,17 +54,17 @@ export default function Services({ onSelectService }: ServicesProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="text-xs uppercase tracking-widest text-[#7B5CF0] font-bold mb-4">// Core Services</div>
+              <div className="text-xs uppercase tracking-widest text-violet font-bold mb-4">// Core Services</div>
               <h2 className="text-5xl md:text-6xl font-display font-black text-ink leading-tight">
                 What We <br />
                 <span className="text-coral">Build</span>.
               </h2>
-              <p className="text-muted font-body mt-6 text-lg max-w-sm">
+              <p className="text-gray-400 font-body mt-6 text-lg max-w-sm">
                 We bridge the gap between heavy technical engineering and exquisite premium design, serving clients from Jharsuguda to the global stage.
               </p>
               
               <div className="mt-10 flex items-center gap-3">
-                <span className="text-xs font-semibold text-ink bg-white/[0.04] border border-border/60 rounded-full px-3 py-1">₹ Local pricing tier active</span>
+                <span className="text-xs font-semibold text-ink bg-white/5 border border-border/60 rounded-full px-3 py-1">₹ Local pricing tier active</span>
                 <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">✓ Free consultation</span>
               </div>
             </motion.div>
@@ -91,13 +91,13 @@ export default function Services({ onSelectService }: ServicesProps) {
                     <h3 className="text-2xl font-display font-bold text-ink group-hover:text-coral transition-colors">
                       {svc.name}
                     </h3>
-                    <span className="bg-lime text-[#111110] font-body text-xs font-extrabold rounded-full px-4 py-1.5 shadow-sm">
+                    <span className="bg-lime text-slate-900 font-body text-xs font-extrabold rounded-full px-4 py-1.5 shadow-sm">
                       {svc.price}
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-muted font-body text-base leading-relaxed mb-6">
+                  <p className="text-gray-400 font-body text-sm md:text-base leading-relaxed mb-6">
                     {svc.description}
                   </p>
 
@@ -117,7 +117,7 @@ export default function Services({ onSelectService }: ServicesProps) {
         </div>
 
         {/* Tech Marquee strip below */}
-        <div className="mt-24 overflow-hidden rounded-2xl bg-[#111110] border border-border/10 py-5 select-none relative shadow-lg">
+          <div className="mt-24 overflow-hidden rounded-2xl bg-base border border-border/10 py-5 select-none relative shadow-lg">
           <div className="flex w-max">
             <motion.div
               animate={{ x: [0, -800] }}

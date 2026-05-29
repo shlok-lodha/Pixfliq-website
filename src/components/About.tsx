@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import PixLogo from '../../assets/portfolio/pixfliq icon real-2.png';
 
 export default function About() {
   const stats = [
@@ -11,7 +12,7 @@ export default function About() {
   const skills = ["React", "Figma", "Supabase", "Branding", "UI/UX"];
 
   return (
-    <section id="about" className="bg-[#111110] pt-28 pb-32 text-white relative z-20 border-t border-b border-white/5">
+    <section id="about" className="bg-base pt-28 pb-32 text-white relative z-20 border-t border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Core Identity Section */}
@@ -33,7 +34,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-[#FAF8F4] leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-ink leading-tight"
             >
               Built from Odisha.<br />
               Trusted Across <span className="text-coral">India</span>.
@@ -47,7 +48,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-body text-base lg:text-lg text-gray-300 leading-relaxed space-y-6"
+              className="font-body text-sm lg:text-lg text-gray-300 leading-relaxed space-y-6"
             >
               <p>
                 Pixfliq started with one belief — that exceptional digital design shouldn't be limited to metros. We're a Jharsuguda-native creative studio delivering world-class websites, brand identities, and digital experiences to businesses across India and beyond.
@@ -56,7 +57,7 @@ export default function About() {
                 Our founder Shlok Lodha picked up his first line of code at 16. Today, at 21, he leads a skilled team of designers, developers, and strategists who bring together technical precision and visual storytelling. Every project we take on is treated like our own brand.
               </p>
               <p>
-                From luxury travel platforms to fashion e-commerce stores and interior design portfolios — we've shipped 50+ projects with a 4.9-star average client rating. We don't just build websites. We build digital trust.
+                From luxury travel platforms to fashion e-commerce stores and interior design portfolios — we've shipped 50+ projects with a 4.5-star average client rating. We don't just build websites. We build digital trust.
               </p>
             </motion.div>
           </div>
@@ -72,9 +73,9 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-white border border-[#282725] rounded-2xl p-6 md:p-8 text-center shadow-lg hover:scale-102 transition-transform duration-300"
+              className="bg-white border border-border rounded-2xl p-6 md:p-8 text-center shadow-lg hover:scale-102 transition-transform duration-300"
             >
-              <div className="text-4xl md:text-5xl font-display font-black text-[#111110]">
+                <div className="text-4xl md:text-5xl font-display font-black text-slate-900">
                 {stat.value}
               </div>
               <div className="text-xs md:text-sm text-gray-600 font-bold font-body mt-2.5">
@@ -96,14 +97,13 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="md:col-span-5 flex justify-center w-full"
             >
-              <div className="rounded-3xl bg-gradient-to-br from-[#7B5CF0]/20 to-[#FF5C3A]/20 w-full max-w-sm h-80 flex items-center justify-center border border-white/10 shadow-xl group overflow-hidden relative">
-                <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />
-                <span className="text-6xl font-display font-black text-[#7B5CF0] select-none tracking-tighter group-hover:scale-110 transition-transform duration-500">
-                  SL
-                </span>
-                {/* Visual grid decor inside placeholder avatar */}
-                <div className="absolute bottom-4 left-4 right-4 text-center">
-                  <span className="text-[10px] text-white/40 tracking-widest font-mono font-bold uppercase mr-1">DESIGNER & CODER ORIGINAL</span>
+              <div className="relative w-full max-w-sm flex flex-col items-center justify-center gap-4">
+                <div className="absolute inset-0 rounded-3xl bg-coral/10 blur-3xl opacity-60" />
+                <img src={PixLogo} alt="Pixfliq logo" className="relative w-full max-w-65 object-contain" style={{imageRendering: 'auto'}} />
+                <div className="relative z-10 text-center px-6">
+                  <p className="text-sm md:text-base font-semibold uppercase tracking-[0.35em] text-white/85 drop-shadow-[0_0_14px_rgba(255,92,58,0.45)]">
+                    YOUR VISION OUR PIXELS WORLD&apos;S ATTENTION
+                  </p>
                 </div>
               </div>
             </motion.div>
